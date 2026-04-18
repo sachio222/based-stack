@@ -72,6 +72,7 @@ Task Checklists:
     - cold-email
     - email-sequence
     - competitor-alternatives
+    - writing-voice
   CRO & Conversion:
     - page-cro
     - form-cro
@@ -110,6 +111,7 @@ Process Orchestrators:
 Workflow Discipline:
   - brainstorming
   - grill-me
+  - init-vault
   - writing-plans
   - executing-plans
   - subagent-driven-development
