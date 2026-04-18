@@ -97,7 +97,9 @@ Remove or comment out `hooks.SessionEnd` in `~/.claude/settings.json`. Hook stop
 
 ## Gotchas
 
-- **`SessionEnd` only fires on clean exit.** Hard-kills don't fire hooks. Clean paths: `/exit`, `Ctrl+D`, `Ctrl+C` twice.
+- **Ctrl+C kills Claude Code immediately — the hook does NOT complete in time.** Tested empirically 2026-04-18. The `timeout` field in the hook config doesn't mean the process blocks until the hook finishes; it just bounds how long the hook *can* run if the process stays alive. Ctrl+C exits the CLI before the `agent` hook's inference + file edits complete. Use the [`update-workstate` slash command](../../commands/update-workstate/) for reliable updates.
+- **`/exit` and `Ctrl+D` may work better** (untested) — worth keeping the hook installed as a best-effort bonus for those paths.
+- **Hard-kills definitely don't fire hooks** — terminal window close, `kill -9`, crashes.
 - **Hook runs with tool access** (it's an `agent`-type hook, can read and edit files). Scope rule in the prompt keeps it tight.
 - **Multi-project sessions** — hook handles all projects touched, one classification per project.
 
