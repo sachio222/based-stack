@@ -1,0 +1,133 @@
+# Skill category mapping for skills-index.md autogen.
+# Edit this file when adding/removing a skill, then run sync-skills-index.
+# Skills listed here but not installed are ignored.
+# Skills installed but not listed here bubble up under "Uncategorized".
+
+Knowledge Frameworks:
+  Marketing & Messaging:
+    - storybrand-messaging
+    - made-to-stick
+    - contagious
+    - influence-psychology
+    - marketing-psychology
+    - one-page-marketing
+    - scorecard-marketing
+    - cro-methodology
+  Sales & Offers:
+    - hundred-million-offers
+    - predictable-revenue
+    - negotiation
+  Strategy & Positioning:
+    - obviously-awesome
+    - crossing-the-chasm
+    - blue-ocean-strategy
+    - traction-eos
+    - decisive
+  Product & Discovery:
+    - jobs-to-be-done
+    - mom-test
+    - lean-startup
+    - continuous-discovery
+    - design-sprint
+    - inspired-product
+    - design-everyday-things
+    - testing-business-ideas
+  Project Management:
+    - shape-up
+  UX & Design:
+    - hooked-ux
+    - improve-retention
+    - ux-heuristics
+    - lean-ux
+    - microinteractions
+    - top-design
+    - refactoring-ui
+    - web-typography
+    - ios-hig-design
+  Team & Culture:
+    - drive-motivation
+    - culture-code
+  Engineering:
+    - clean-code
+    - clean-architecture
+    - domain-driven-design
+    - pragmatic-programmer
+    - refactoring-patterns
+    - software-design-philosophy
+    - ddia-systems
+    - system-design
+    - high-perf-browser
+    - release-it
+
+Task Checklists:
+  Context & Foundation:
+    - product-marketing-context
+    - customer-research
+  Writing & Copy:
+    - copywriting
+    - copy-editing
+    - content-strategy
+    - social-content
+    - ad-creative
+    - cold-email
+    - email-sequence
+    - competitor-alternatives
+  CRO & Conversion:
+    - page-cro
+    - form-cro
+    - signup-flow-cro
+    - onboarding-cro
+    - popup-cro
+    - paywall-upgrade-cro
+    - ab-test-setup
+    - churn-prevention
+  SEO & Analytics:
+    - seo-audit
+    - ai-seo
+    - schema-markup
+    - programmatic-seo
+    - site-architecture
+    - analytics-tracking
+  Strategy & Growth:
+    - pricing-strategy
+    - launch-strategy
+    - marketing-ideas
+    - lead-magnets
+    - free-tool-strategy
+    - referral-program
+    - paid-ads
+    - revops
+    - sales-enablement
+
+Process Orchestrators:
+  - codebase-analysis
+  - decision-critic
+  - deepthink
+  - problem-analysis
+  - prompt-engineer
+  - refactor
+
+Workflow Discipline:
+  - brainstorming
+  - grill-me
+  - writing-plans
+  - executing-plans
+  - subagent-driven-development
+  - dispatching-parallel-agents
+  - test-driven-development
+  - systematic-debugging
+  - requesting-code-review
+  - receiving-code-review
+  - verification-before-completion
+  - finishing-a-development-branch
+  - using-git-worktrees
+  - writing-skills
+  - using-superpowers
+  - context-engineering
+  - incoherence
+  - planner
+
+Platform Tools:
+  - cc-history
+  - doc-sync
+  - arxiv-to-md

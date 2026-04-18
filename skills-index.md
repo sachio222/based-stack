@@ -1,229 +1,214 @@
 # Skills Index
 
-Complete index of all installed skills. Invoke via `/skill-name`.
+Auto-generated from `.skill-categories.yaml` and each skill's `SKILL.md` frontmatter. Run `sync-skills-index.py` after adding or removing a skill.
 
 ---
 
-## 1. Knowledge Frameworks
+<!-- AUTOGEN:BEGIN -->
 
-Skills that load a mental model or theoretical framework to shape thinking. These follow a structured template (Core Principle, Scoring, numbered sections with Core concept / Why it works / Key insights / Product applications / Copy patterns / Ethical boundary, Common Mistakes, Quick Diagnostic, Reference Files). Load these in **Pass 1** to shape how you approach a problem before executing.
+## 1. Knowledge Frameworks
 
 ### Marketing & Messaging
 
-| Skill                  | When to Use                                                                      | Cross-references                      |
-| ---------------------- | -------------------------------------------------------------------------------- | ------------------------------------- |
-| `storybrand-messaging` | Brand messaging, website copy, elevator pitch, one-liners, landing page copy     | made-to-stick, obviously-awesome      |
-| `made-to-stick`        | Memorable messaging, taglines, value props, SUCCESs checklist                    | storybrand-messaging, contagious      |
-| `contagious`           | Word-of-mouth, virality, shareable content, STEPPS framework                     | made-to-stick, influence-psychology   |
-| `influence-psychology` | Social proof, persuasive copy, ethical persuasion (Cialdini's 6 principles)      | negotiation, contagious               |
-| `marketing-psychology` | Apply cognitive biases, mental models, behavioral science to marketing decisions | influence-psychology, cro-methodology |
-| `one-page-marketing`   | Full marketing plan, target market, USP, lead nurture, CLV, referral programs    | storybrand-messaging, cro-methodology |
-| `scorecard-marketing`  | Quiz funnels, lead magnets, assessment tools, score-based segmentation           | cro-methodology, one-page-marketing   |
-| `cro-methodology`      | Landing page not converting, A/B tests, objection handling, funnel mapping       | one-page-marketing, ux-heuristics     |
+| Skill | Description |
+|---|---|
+| `storybrand-messaging` | Clarify brand messaging using narrative structure that positions the customer as hero. Use when the user mentions "brand message", "website copy", "elevator pitch", "one-liner", "messaging isn't resonating", or "brand script". Covers landing page copy, marketing collateral, and consistent communication. For memorable messaging, see made-to-stick. For product positioning, see obviously-awesome. |
+| `made-to-stick` | Craft messages that are understood, remembered, and drive action using the SUCCESs checklist (Simple, Unexpected, Concrete, Credible, Emotional, Stories). Use when the user mentions "make it memorable", "sticky messaging", "tagline", "value proposition", or "why the message isn't landing". For narrative brand frameworks, see storybrand-messaging. For viral sharing, see contagious. |
+| `contagious` | Engineer word-of-mouth and virality using the STEPPS framework (Social Currency, Triggers, Emotion, Public, Practical Value, Stories). Use when the user mentions "go viral", "word of mouth", "shareable content", "social currency", or "why people share". Covers environmental triggers and high-arousal emotional content. For sticky messaging, see made-to-stick. For persuasion tactics, see influence-psychology. |
+| `influence-psychology` | Apply the six principles of ethical persuasion (reciprocity, commitment, social proof, authority, liking, scarcity) to product design, copy, and sales. Use when the user mentions "social proof", "persuasive copy", "why users don't convert", or "ethical persuasion". For deal negotiation tactics, see negotiation. For viral word-of-mouth, see contagious. |
+| `marketing-psychology` | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context. |
+| `one-page-marketing` | Build a complete marketing plan covering the full customer journey from stranger to raving fan. Use when the user mentions "marketing plan", "target market", "USP", "lead nurture", "customer lifetime value", or "referral program". Covers the PVP Index, channel selection, and advocacy systems. For brand messaging, see storybrand-messaging. For conversion optimization, see cro-methodology. |
+| `scorecard-marketing` | Build quiz and assessment funnels that generate qualified leads at 30-50% conversion. Use when the user mentions "lead magnet", "quiz funnel", "assessment tool", "lead generation", or "score-based segmentation". Covers question design, dynamic results by tier, and automated follow-up sequences. For landing page conversion, see cro-methodology. For full marketing plans, see one-page-marketing. |
+| `cro-methodology` | Audit websites and landing pages for conversion issues and design evidence-based A/B tests. Use when the user mentions "landing page isn't converting", "conversion rate", "A/B test", "why visitors leave", or "objection handling". Covers funnel mapping, persuasion assets, and objection/counter-objection frameworks. For overall marketing strategy, see one-page-marketing. For usability issues, see ux-heuristics. |
 
 ### Sales & Offers
 
-| Skill | When to Use | Cross-references |
-|---|---|---|
-| `hundred-million-offers` | Pricing strategy, irresistible offers, bonuses, guarantees, scarcity, offer naming | obviously-awesome, predictable-revenue |
-| `predictable-revenue` | Outbound B2B sales, SDR process, prospecting, pipeline building | hundred-million-offers, influence-psychology |
-| `negotiation` | Contract terms, salary, objection handling, tactical empathy (Voss) | influence-psychology |
+| Skill | Description |
+|---|---|
+| `hundred-million-offers` | Create irresistible offers using the Value Equation, bonus stacking, risk-reversing guarantees, and ethical scarcity. Use when the user mentions "pricing strategy", "irresistible offer", "bonuses and guarantees", "value-to-price ratio", or "offer naming". Covers the MAGIC naming formula and starving-crowd targeting. For product positioning, see obviously-awesome. For outbound sales, see predictable-revenue. |
+| `predictable-revenue` | Build a scalable outbound B2B sales process with specialized roles (SDR, AE, CSM). Use when the user mentions "outbound sales", "Cold Calling 2.0", "prospecting emails", "sales pipeline", "SDR process", or "B2B SaaS sales". Covers lead generation, qualification frameworks, and separating prospecting from closing. For offer design, see hundred-million-offers. For persuasion science, see influence-psychology. |
+| `negotiation` | Prepare and execute negotiations using tactical empathy, calibrated questions, and the Ackerman method. Use when the user mentions "salary negotiation", "contract terms", "handling objections", "mirroring and labeling", or "difficult conversation". Covers accusation audits, Black Swan discovery, and the "That's Right" technique. For persuasion in product/marketing, see influence-psychology. |
 
 ### Strategy & Positioning
 
-| Skill                 | When to Use                                                                                         | Cross-references                       |
-| --------------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| `obviously-awesome`   | Product positioning, competitive alternatives, market category                                      | jobs-to-be-done, crossing-the-chasm    |
-| `crossing-the-chasm`  | Tech adoption, beachhead segments, early adopters vs. mainstream                                    | obviously-awesome, blue-ocean-strategy |
-| `blue-ocean-strategy` | Uncontested market space, value innovation, ERRC framework, strategy canvas                         | crossing-the-chasm, obviously-awesome  |
-| `traction-eos`        | EOS implementation, V/TO, quarterly rocks, L10 meetings, accountability                             | drive-motivation, lean-startup         |
-| `decisive`            | Decision-making framework (WRAP). Widen options, reality-test, attain distance, prepare to be wrong | --                                     |
+| Skill | Description |
+|---|---|
+| `obviously-awesome` | Define product positioning by mapping competitive alternatives, unique attributes, and best-fit customers to the right market category. Use when the user mentions "positioning", "competitive alternatives", "how to position", "market category", or "why customers don't get it". Covers positioning canvas and team workshops. For customer jobs analysis, see jobs-to-be-done. For go-to-market, see crossing-the-chasm. |
+| `crossing-the-chasm` | Navigate the technology adoption lifecycle from early adopters to mainstream market. Use when the user mentions "crossing the chasm", "beachhead segment", "whole product", "early adopters vs. mainstream", or "tech go-to-market". Covers D-Day analogy, bowling-pin strategy, and positioning against incumbents. For product positioning, see obviously-awesome. For new market creation, see blue-ocean-strategy. |
+| `blue-ocean-strategy` | Create uncontested market space using value innovation instead of competing head-to-head. Use when the user mentions "blue ocean", "red ocean", "strategy canvas", "ERRC framework", "value innovation", or "non-customers". Covers the Four Actions Framework, buyer utility map, and value-cost trade-offs. For tech adoption strategy, see crossing-the-chasm. For product positioning, see obviously-awesome. |
+| `traction-eos` | Implement the Entrepreneurial Operating System (EOS) to align vision and execution across a company. Use when the user mentions "EOS", "V/TO", "quarterly rocks", "Level 10 meetings", "accountability chart", or "IDS process". Covers the six EOS components: Vision, People, Data, Issues, Process, Traction. For team motivation design, see drive-motivation. For lean experimentation, see lean-startup. |
+| `decisive` | Use when making important decisions, evaluating options, avoiding decision traps, or designing decision processes for teams. Covers the WRAP framework (Widen options, Reality-test, Attain distance, Prepare to be wrong), the four villains of decision-making, and structured methods for overcoming narrow framing, confirmation bias, short-term emotion, and overconfidence. Use when the user mentions "decision making", "should I", "which option", "narrow framing", "confirmation bias", "overconfidence", "pros and cons", "stuck deciding", "decision process", "premortem", "tripwire", or "base rates". For negotiation tactics, see negotiation. For product positioning decisions, see obviously-awesome. |
 
 ### Product & Discovery
 
-| Skill                    | When to Use                                                                                                         | Cross-references                      |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| `jobs-to-be-done`        | Customer discovery, why customers churn, product-market fit, JTBD interviews                                        | obviously-awesome, design-sprint      |
-| `mom-test`               | Customer interviews, idea validation, avoiding leading questions                                                    | jobs-to-be-done, design-sprint        |
-| `lean-startup`           | MVP scoping, validated learning, pivot/persevere, actionable metrics                                                | design-sprint, jobs-to-be-done        |
-| `continuous-discovery`   | Weekly customer touchpoints, opportunity solution trees, assumption mapping                                         | mom-test, inspired-product            |
-| `design-sprint`          | 5-day prototype-and-test cycle, rapid validation, de-risking                                                        | lean-startup, jobs-to-be-done         |
-| `inspired-product`       | Empowered product teams, dual-track discovery/delivery, product vision                                              | mom-test, continuous-discovery        |
-| `design-everyday-things` | Affordances, signifiers, error prevention, discoverability, conceptual models                                       | ux-heuristics, ios-hig-design         |
-| `testing-business-ideas` | Experiment design for validating assumptions. 44 experiment types, pretotyping, fake doors, concierge, Wizard of Oz | lean-startup, mom-test, design-sprint |
+| Skill | Description |
+|---|---|
+| `jobs-to-be-done` | Discover what customers truly need by analyzing the "job" they hire your product to do. Use when the user mentions "customer discovery", "why customers churn", "what job does this solve", "competing against luck", or "product-market fit". Covers JTBD interviews, competition analysis, and jobs-oriented roadmaps. For product positioning, see obviously-awesome. For rapid validation, see design-sprint. |
+| `mom-test` | Talk to customers without leading them using Mom Test rules: discuss their life not your idea, ask about specifics in the past, and talk less. Use when the user mentions "customer interviews", "validate my idea", "users say they want it but don't buy", "leading questions", or "The Mom Test". Covers commitment and advancement, avoiding compliments, and extracting signal from noise. For product-market fit, see jobs-to-be-done. For rapid prototype testing, see design-sprint. |
+| `lean-startup` | Design MVPs, validated learning experiments, and pivot-or-persevere decisions using Build-Measure-Learn. Use when the user mentions "MVP scope", "validated learning", "pivot or persevere", "vanity metrics", or "test assumptions". Covers innovation accounting and actionable metrics. For 5-day prototype testing, see design-sprint. For customer motivation analysis, see jobs-to-be-done. |
+| `continuous-discovery` | Build a weekly cadence of customer touchpoints using Opportunity Solution Trees, assumption mapping, and interview snapshots. Use when the user mentions "continuous discovery", "opportunity solution tree", "weekly interviews", "assumption testing", or "discovery habits". Covers experience mapping, co-creation, and prioritizing opportunities. For interview technique, see mom-test. For team structure, see inspired-product. |
+| `design-sprint` | Run a structured 5-day process to prototype, test, and validate product ideas with real users. Use when the user mentions "design sprint", "validate in a week", "rapid prototype", "test with users", or "de-risk before building". Covers mapping, sketching, deciding, prototyping, and testing. For ongoing experimentation, see lean-startup. For customer job analysis, see jobs-to-be-done. |
+| `inspired-product` | Build empowered product teams using discovery and delivery dual-track. Use when the user mentions "product discovery", "empowered teams", "feature factory", "product roadmap", "opportunity assessment", or "product vision". Covers product discovery techniques, team structure, and continuous value delivery. For customer interviews, see mom-test. For ongoing discovery systems, see continuous-discovery. |
+| `design-everyday-things` | Apply foundational design principles: affordances, signifiers, constraints, feedback, and conceptual models. Use when the user mentions "why is this confusing", "affordance", "error prevention", "discoverability", "human-centered design", or "fault tolerance". Covers the gulfs of execution and evaluation. For usability scoring, see ux-heuristics. For iOS-specific patterns, see ios-hig-design. |
+| `testing-business-ideas` | Design and run experiments to validate business ideas before building. Use when the user mentions "testing assumptions", "validating ideas", "fake door test", "pretotyping", "concierge MVP", "desirability risk", "ILI/OLI", or "Wizard of Oz experiment". Covers hypothesis design, evidence evaluation, and the full experiment library. For ongoing product discovery, see continuous-discovery. For build-measure-learn cycles, see lean-startup. |
 
 ### Project Management
 
-| Skill | When to Use | Cross-references |
-|---|---|---|
-| `shape-up` | 6-week cycles, appetite-based scoping, shaping, betting table, hill charts, circuit breaker, scope hammering | lean-startup, testing-business-ideas |
+| Skill | Description |
+|---|---|
+| `shape-up` | Plan, scope, and ship software projects using Shape Up cycles. Use when the user mentions "shaping work", "6-week cycles", "appetite", "betting table", "hill charts", "scopes", or "circuit breaker". Covers pre-cycle design, cycle execution, and scope management. For rapid 5-day prototyping, see design-sprint. For validated learning experiments, see lean-startup. |
 
 ### UX & Design
 
-| Skill | When to Use | Cross-references |
-|---|---|---|
-| `hooked-ux` | Habit-forming loops, engagement, push notifications, variable rewards | improve-retention, contagious |
-| `improve-retention` | User drop-off, activation rate, onboarding friction, B=MAP behavior design | hooked-ux, drive-motivation |
-| `ux-heuristics` | Usability audits, heuristic evaluation (Nielsen's 10) | design-everyday-things, cro-methodology |
-| `lean-ux` | Hypothesis-driven design, rapid experimentation, cross-functional collaboration | design-sprint, continuous-discovery |
-| `microinteractions` | Animations, feedback loops, state changes, detail polish | hooked-ux |
-| `top-design` | Layout principles, visual hierarchy, grid systems | refactoring-ui |
-| `refactoring-ui` | Visual design improvements, spacing, color, typography, layout hierarchy | web-typography, top-design |
-| `web-typography` | Font pairing, type scale, line height, readability | refactoring-ui |
-| `ios-hig-design` | iOS-specific patterns, HIG compliance | design-everyday-things |
+| Skill | Description |
+|---|---|
+| `hooked-ux` | Design habit-forming product loops using the Hook Model (Trigger, Action, Variable Reward, Investment). Use when the user mentions "users aren't coming back", "engagement loops", "habit formation", "push notifications", or "variable rewards". Covers ethics evaluation and onboarding for habits. For friction reduction and B=MAP, see improve-retention. For viral sharing, see contagious. |
+| `improve-retention` | Diagnose and fix retention problems using behavior design (B=MAP). Use when the user mentions "users drop off", "activation rate", "onboarding friction", "retention metrics", or "why users don't complete". Covers the Ability Chain, prompt design, and tiny behaviors that compound. For habit loops and variable rewards, see hooked-ux. For intrinsic motivation, see drive-motivation. |
+| `ux-heuristics` | Evaluate and improve interface usability using heuristic analysis. Use when the user mentions "usability audit", "UX review", "users are confused", "heuristic evaluation", "form usability", or "navigation problems". Covers Nielsen's 10 heuristics, severity ratings, and information architecture. For visual design fixes, see refactoring-ui. For conversion-focused audits, see cro-methodology. |
+| `lean-ux` | Apply lean thinking to UX: hypothesis-driven design, collaborative sketching, and rapid experiments instead of heavy deliverables. Use when the user mentions "Lean UX", "design hypothesis", "UX experiment", "collaborative design", or "outcome over output". Covers hypothesis statements, MVPs for UX, and cross-functional collaboration. For Build-Measure-Learn, see lean-startup. For usability audits, see ux-heuristics. |
+| `microinteractions` | Design the small details — triggers, rules, feedback, loops and modes — that separate good products from great ones. Use when the user mentions "microinteraction", "button feedback", "loading state", "toggle design", "animation detail", or "interaction polish". Covers trigger design, state rules, feedback mechanisms, and progressive loops. For overall UI polish, see refactoring-ui. For affordance design, see design-everyday-things. |
+| `top-design` | Create award-winning, immersive web experiences at the level of Awwwards-featured agencies. Use when the user mentions "premium website", "portfolio site", "scroll animations", "Awwwards quality", or "brand experience". Covers dramatic typography, purposeful motion, scroll-based composition, and performance-optimized animation. For foundational UI, see refactoring-ui. For type selection, see web-typography. |
+| `refactoring-ui` | Audit and fix visual hierarchy, spacing, color, and depth in web UIs. Use when the user mentions "my UI looks off", "fix the design", "Tailwind styling", "color palette", or "visual hierarchy". Covers grayscale-first workflow, constrained design scales, shadows, and component styling. For typeface selection, see web-typography. For usability audits, see ux-heuristics. |
+| `web-typography` | Select, pair, and implement typefaces for web projects. Use when the user mentions "font pairing", "which typeface", "line height", "responsive typography", "web font loading", or "type hierarchy". Covers readability evaluation, CSS implementation, and performance optimization. For overall UI design systems, see refactoring-ui. For dramatic typographic experiences, see top-design. |
+| `ios-hig-design` | Design native iOS interfaces following Apple Human Interface Guidelines. Use when the user mentions "iPhone app", "iPad layout", "SwiftUI", "UIKit", "Dynamic Island", "safe areas", or "HIG compliance". Covers navigation patterns, accessibility, SF Symbols, and platform conventions. For general UI polish, see refactoring-ui. For affordance design, see design-everyday-things. |
 
 ### Team & Culture
 
-| Skill | When to Use | Cross-references |
-|---|---|---|
-| `drive-motivation` | Intrinsic motivation, autonomy/mastery/purpose, gamification, team incentives | hooked-ux, improve-retention |
-| `culture-code` | Team culture, belonging, psychological safety, onboarding, group dynamics | drive-motivation |
+| Skill | Description |
+|---|---|
+| `drive-motivation` | Design motivation systems using Autonomy, Mastery, and Purpose (AMP) for products and teams. Use when the user mentions "intrinsic motivation", "gamification isn't working", "team incentives", "autonomy", "mastery", or "purpose-driven". Covers why carrot-and-stick fails and how to build progress systems. For habit-forming product loops, see hooked-ux. For retention behavior design, see improve-retention. |
+| `culture-code` | Use when designing team culture, onboarding experiences, gym environments, coaching relationships, or any context where group dynamics matter. Covers belonging cues, psychological safety, vulnerability loops, and purpose signals. Use when the user mentions "team culture", "belonging", "psychological safety", "onboarding experience", "gym culture", "toxic culture", "new member experience", "vulnerability", "trust building", "group dynamics", "bad apples", or "purpose". For motivation systems, see drive-motivation. For habit loops, see hooked-ux. |
 
 ### Engineering
 
-| Skill | When to Use | Cross-references |
-|---|---|---|
-| `clean-code` | Code readability, naming, functions, formatting | refactoring-patterns, pragmatic-programmer |
-| `clean-architecture` | Dependency rules, boundaries, layered architecture | domain-driven-design, software-design-philosophy |
-| `domain-driven-design` | Bounded contexts, aggregates, ubiquitous language | clean-architecture |
-| `pragmatic-programmer` | General engineering philosophy and practices | clean-code |
-| `refactoring-patterns` | Code smells, systematic refactoring | clean-code |
-| `software-design-philosophy` | Module design, complexity management | clean-architecture |
-| `ddia-systems` | Distributed systems, replication, partitioning | system-design |
-| `system-design` | System design interviews and architecture | ddia-systems |
-| `high-perf-browser` | Browser performance, networking, rendering | -- |
-| `release-it` | Production stability, circuit breakers, bulkheads | ddia-systems |
+| Skill | Description |
+|---|---|
+| `clean-code` | Write readable, maintainable code through disciplined naming, small functions, and clean error handling. Use when the user mentions "code review", "naming conventions", "function too long", "code smells", or "readable code". Covers SRP, comment discipline, formatting, and unit testing. For refactoring techniques, see refactoring-patterns. For architecture, see clean-architecture. |
+| `clean-architecture` | Structure software around the Dependency Rule: source code dependencies point inward from frameworks to use cases to entities. Use when the user mentions "architecture layers", "dependency rule", "ports and adapters", "hexagonal architecture", or "use case boundary". Covers component principles, boundaries, and SOLID. For code quality, see clean-code. For domain modeling, see domain-driven-design. |
+| `domain-driven-design` | Model software around the business domain using bounded contexts, aggregates, and ubiquitous language. Use when the user mentions "domain modeling", "bounded context", "aggregate root", "ubiquitous language", or "anti-corruption layer". Covers entities vs value objects, domain events, and context mapping strategies. For architecture layers, see clean-architecture. For complexity, see software-design-philosophy. |
+| `pragmatic-programmer` | Apply meta-principles of software craftsmanship: DRY, orthogonality, tracer bullets, and design by contract. Use when the user mentions "best practices", "pragmatic approach", "broken windows", "tracer bullet", or "software craftsmanship". Covers estimation, domain languages, and reversibility. For code-level quality, see clean-code. For refactoring techniques, see refactoring-patterns. |
+| `refactoring-patterns` | Apply named refactoring transformations to improve code structure without changing behavior. Use when the user mentions "refactor this", "code smells", "extract method", "replace conditional", or "technical debt". Covers smell-driven refactoring, safe transformation sequences, and testing guards. For code quality foundations, see clean-code. For managing complexity, see software-design-philosophy. |
+| `software-design-philosophy` | Manage software complexity through deep modules, information hiding, and strategic programming. Use when the user mentions "module design", "API too complex", "shallow class", "complexity budget", or "strategic vs tactical". Covers deep vs shallow modules, red flags for complexity, and comments as design documentation. For code quality, see clean-code. For boundaries, see clean-architecture. |
+| `ddia-systems` | Design data systems by understanding storage engines, replication, partitioning, transactions, and consistency models. Use when the user mentions "database choice", "replication lag", "partitioning strategy", "consistency vs availability", or "stream processing". Covers data models, batch/stream processing, and distributed consensus. For system design, see system-design. For resilience, see release-it. |
+| `system-design` | Design scalable distributed systems using structured approaches for load balancing, caching, database scaling, and message queues. Use when the user mentions "system design", "scale this", "high availability", "rate limiter", or "design a URL shortener". Covers common system designs and back-of-the-envelope estimation. For data fundamentals, see ddia-systems. For resilience, see release-it. |
+| `high-perf-browser` | Optimize web performance through network protocols, resource loading, and browser rendering internals. Use when the user mentions "page load speed", "Core Web Vitals", "HTTP/2", "resource hints", "network latency", or "render blocking". Covers TCP/TLS optimization, caching strategies, WebSocket/SSE, and protocol selection. For UI visual performance, see refactoring-ui. For font loading, see web-typography. |
+| `release-it` | Build production-ready systems with stability patterns: circuit breakers, bulkheads, timeouts, and retry logic. Use when the user mentions "production outage", "circuit breaker", "timeout strategy", "deployment pipeline", or "chaos engineering". Covers capacity planning, health checks, and anti-fragility patterns. For data systems, see ddia-systems. For system architecture, see system-design. |
+
 
 ---
 
 ## 2. Task Checklists
 
-Skills that define a specific step-by-step workflow to execute. Load these in **Pass 2** to produce a specific deliverable or audit against a checklist. They are "do this" skills -- concrete, output-oriented, and grounded in the current task.
-
 ### Context & Foundation
 
-| Skill                       | When to Use                                                                                                  |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `product-marketing-context` | **Run first.** Creates/updates the product context doc that all other marketing skills reference.            |
-| `customer-research`         | Conduct, analyze, or synthesize customer research. ICP, personas, VOC, review mining, Reddit/forum research. |
+| Skill | Description |
+|---|---|
+| `product-marketing-context` | When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills — it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context. |
+| `customer-research` | When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts," "customer interviews," "survey analysis," "support ticket analysis," "voice of customer," "VOC," "build personas," "customer personas," "jobs to be done," "JTBD," "what do customers say," "what are customers struggling with," "Reddit mining," "G2 reviews," "review mining," "digital watering holes," "community research," "forum research," "competitor reviews," "customer sentiment," or "find out why customers churn/convert/buy." Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see page-cro. |
 
 ### Writing & Copy
 
-| Skill | When to Use |
+| Skill | Description |
 |---|---|
-| `copywriting` | Write/rewrite marketing copy for any page: homepage, landing, pricing, feature, about. Step-by-step workflow. |
-| `copy-editing` | Edit, review, polish existing copy. Tighten, sharpen, fix awkward reads. |
-| `content-strategy` | Plan what content to create, topic clusters, editorial calendar, content pillars. |
-| `social-content` | Create social media content for LinkedIn, Instagram, TikTok, Twitter/X. Content calendars, repurposing. |
-| `ad-creative` | Generate ad copy at scale: headlines, descriptions, variations for Google/Meta/LinkedIn. |
-| `cold-email` | Write B2B cold outreach emails and follow-up sequences. |
-| `email-sequence` | Create drip campaigns, nurture sequences, welcome series, lifecycle emails. |
-| `competitor-alternatives` | Create "vs" pages, alternative pages, competitor comparison content. |
+| `copywriting` | When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," "CTA copy," "value proposition," "tagline," "subheadline," "hero section copy," "above the fold," "this copy is weak," "make this more compelling," or "help me describe my product." Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see email-sequence. For popup copy, see popup-cro. For editing existing copy, see copy-editing. |
+| `copy-editing` | When the user wants to edit, review, or improve existing marketing copy. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' or 'sharpen the messaging.' Use this when the user already has copy and wants it improved rather than rewritten from scratch. For writing new copy, see copywriting. |
+| `content-strategy` | When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions "content strategy," "what should I write about," "content ideas," "blog strategy," "topic clusters," "content planning," "editorial calendar," "content marketing," "content roadmap," "what content should I create," "blog topics," "content pillars," or "I don't know what to write." Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social-content. |
+| `social-content` | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' or 'grow my following.' Use this for any social media content creation, repurposing, or scheduling task. For broader content strategy, see content-strategy. |
+| `ad-creative` | When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see paid-ads. For landing page copy, see copywriting. |
+| `cold-email` | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions "cold outreach," "prospecting email," "outbound email," "email to leads," "reach out to prospects," "sales email," "follow-up email sequence," "nobody's replying to my emails," or "how do I write a cold email." Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see email-sequence. For sales collateral beyond emails, see sales-enablement. |
+| `email-sequence` | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "drip campaign," "nurture sequence," "onboarding emails," "welcome sequence," "re-engagement emails," "email automation," "lifecycle emails," "trigger-based emails," "email funnel," "email workflow," "what emails should I send," "welcome series," or "email cadence." Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding-cro. |
+| `competitor-alternatives` | When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we compare to X,' 'battle card,' or 'competitor teardown.' Use this for any content that positions your product against competitors. Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. For sales-specific competitor docs, see sales-enablement. |
 
 ### CRO & Conversion
 
-| Skill | When to Use |
+| Skill | Description |
 |---|---|
-| `page-cro` | Audit/optimize any marketing page for conversions. Homepage, landing, pricing, blog. |
-| `form-cro` | Optimize lead capture, contact, demo request forms (not signup forms). |
-| `signup-flow-cro` | Optimize signup, registration, account creation, trial activation flows. |
-| `onboarding-cro` | Optimize post-signup onboarding, activation, first-run experience, time-to-value. |
-| `popup-cro` | Create/optimize popups, modals, exit intent, slide-ins, sticky bars. |
-| `paywall-upgrade-cro` | In-app paywalls, upgrade screens, upsell modals, feature gates. |
-| `ab-test-setup` | Plan, design, implement A/B tests. Hypotheses, variants, statistical significance. |
-| `churn-prevention` | Reduce churn: cancellation flows, save offers, dunning, win-back, exit surveys. |
+| `page-cro` | When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says "CRO," "conversion rate optimization," "this page isn't converting," "improve conversions," "why isn't this page working," "my landing page sucks," "nobody's converting," "low conversion rate," "bounce rate is too high," "people leave without signing up," or "this page needs work." Use this even if the user just shares a URL and asks for feedback — they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro. |
+| `form-cro` | When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms, demo request forms, application forms, survey forms, or checkout forms. Also use when the user mentions "form optimization," "lead form conversions," "form friction," "form fields," "form completion rate," "contact form," "nobody fills out our form," "form abandonment," "too many fields," "demo request form," or "lead form isn't converting." Use this for any non-signup form that captures information. For signup/registration forms, see signup-flow-cro. For popups containing forms, see popup-cro. |
+| `signup-flow-cro` | When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "signup form optimization," "free trial signup," "reduce signup dropoff," "account creation flow," "people aren't signing up," "signup abandonment," "trial conversion rate," "nobody completes registration," "too many steps to sign up," or "simplify our signup." Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro. |
+| `onboarding-cro` | When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions "onboarding flow," "activation rate," "user activation," "first-run experience," "empty states," "onboarding checklist," "aha moment," "new user experience," "users aren't activating," "nobody completes setup," "low activation rate," "users sign up but don't use the product," "time to value," or "first session experience." Use this whenever users are signing up but not sticking around. For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence. |
+| `popup-cro` | When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions "exit intent," "popup conversions," "modal optimization," "lead capture popup," "email popup," "announcement banner," "overlay," "collect emails with a popup," "exit popup," "scroll trigger," "sticky bar," or "notification bar." Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro. |
+| `paywall-upgrade-cro` | When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions "paywall," "upgrade screen," "upgrade modal," "upsell," "feature gate," "convert free to paid," "freemium conversion," "trial expiration screen," "limit reached screen," "plan upgrade prompt," "in-app pricing," "free users won't upgrade," "trial to paid conversion," or "how do I get users to pay." Use this for any in-product moment where you're asking users to upgrade. Distinct from public pricing pages (see page-cro) — this focuses on in-product upgrade moments where the user has already experienced value. For pricing decisions, see pricing-strategy. |
+| `ab-test-setup` | When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariate test," "hypothesis," "should I test this," "which version is better," "test two versions," "statistical significance," or "how long should I run this test." Use this whenever someone is comparing two approaches and wants to measure which performs better. For tracking implementation, see analytics-tracking. For page-level conversion optimization, see page-cro. |
+| `churn-prevention` | When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit survey,' 'pause subscription,' 'involuntary churn,' 'people keep canceling,' 'churn rate is too high,' 'how do I keep users,' or 'customers are leaving.' Use this whenever someone is losing subscribers or wants to build systems to prevent it. For post-cancel win-back email sequences, see email-sequence. For in-app upgrade paywalls, see paywall-upgrade-cro. |
 
 ### SEO & Analytics
 
-| Skill | When to Use |
+| Skill | Description |
 |---|---|
-| `seo-audit` | Audit/diagnose SEO issues. Technical SEO, on-page, meta tags, Core Web Vitals, indexing. |
-| `ai-seo` | Optimize for AI search engines (ChatGPT, Perplexity, AI Overviews). GEO/AEO/LLMO. |
-| `schema-markup` | Add/fix JSON-LD structured data. FAQ schema, product schema, rich snippets. |
-| `programmatic-seo` | Create SEO pages at scale: location pages, comparison pages, directory pages. |
-| `site-architecture` | Plan page hierarchy, navigation, URL structure, internal linking strategy. |
-| `analytics-tracking` | Set up GA4, GTM, conversion tracking, UTM parameters, event tracking. |
+| `seo-audit` | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on-page SEO," "meta tags review," "SEO health check," "my traffic dropped," "lost rankings," "not showing up in Google," "site isn't ranking," "Google update hit me," "page speed," "core web vitals," "crawl errors," or "indexing issues." Use this even if the user just says something vague like "my SEO is bad" or "help with SEO" — start with an audit. For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup. For AI search optimization, see ai-seo. |
+| `ai-seo` | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' or 'optimize for Claude/Gemini.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema-markup. |
+| `schema-markup` | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions "schema markup," "structured data," "JSON-LD," "rich snippets," "schema.org," "FAQ schema," "product schema," "review schema," "breadcrumb schema," "Google rich results," "knowledge panel," "star ratings in search," or "add structured data." Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo. |
+| `programmatic-seo` | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions "programmatic SEO," "template pages," "pages at scale," "directory pages," "location pages," "[keyword] + [city] pages," "comparison pages," "integration pages," "building many pages for SEO," "pSEO," "generate 100 pages," "data-driven pages," or "templated landing pages." Use this whenever someone wants to create many similar pages targeting different keywords or locations. For auditing existing SEO issues, see seo-audit. For content strategy planning, see content-strategy. |
+| `site-architecture` | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions "sitemap," "site map," "visual sitemap," "site structure," "page hierarchy," "information architecture," "IA," "navigation design," "URL structure," "breadcrumbs," "internal linking strategy," "website planning," "what pages do I need," "how should I organize my site," or "site navigation." Use this whenever someone is planning what pages a website should have and how they connect. NOT for XML sitemaps (that's technical SEO — see seo-audit). For SEO audits, see seo-audit. For structured data, see schema-markup. |
+| `analytics-tracking` | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "conversion tracking," "event tracking," "UTM parameters," "tag manager," "GTM," "analytics implementation," "tracking plan," "how do I measure this," "track conversions," "attribution," "Mixpanel," "Segment," "are my events firing," or "analytics isn't working." Use this whenever someone asks how to know if something is working or wants to measure marketing results. For A/B test measurement, see ab-test-setup. |
 
 ### Strategy & Growth
 
-| Skill | When to Use |
+| Skill | Description |
 |---|---|
-| `pricing-strategy` | Pricing decisions, packaging, tiers, freemium, free trial, willingness to pay. |
-| `launch-strategy` | Plan product launches, feature announcements, go-to-market, early access, waitlists. |
-| `marketing-ideas` | Brainstorm marketing strategies and tactics when stuck. Starting point for growth. |
-| `lead-magnets` | Plan lead magnets: ebooks, checklists, templates, gated content for email capture. |
-| `free-tool-strategy` | Build free tools for lead gen: calculators, graders, generators, audit tools. |
-| `referral-program` | Create/optimize referral programs, affiliate programs, ambassador programs. |
-| `paid-ads` | Campaign strategy for Google Ads, Meta, LinkedIn. Targeting, bidding, ROAS optimization. |
-| `revops` | Revenue operations, lead scoring, lead routing, MQL/SQL, marketing-to-sales handoff. |
-| `sales-enablement` | Sales collateral: pitch decks, one-pagers, objection handling docs, demo scripts. |
+| `pricing-strategy` | When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge,' 'my pricing is wrong,' 'pricing page,' 'annual vs monthly,' 'per seat pricing,' or 'should I offer a free plan.' Use this whenever someone is figuring out what to charge or how to structure their plans. For in-app upgrade screens, see paywall-upgrade-cro. |
+| `launch-strategy` | When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas. |
+| `marketing-ideas` | When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't know how to market this,' 'brainstorm marketing,' or 'what marketing should I do.' Use this as a starting point whenever someone is stuck or looking for inspiration on how to grow. For specific channel execution, see the relevant skill (paid-ads, social-content, email-sequence, etc.). |
+| `lead-magnets` | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions "lead magnet," "gated content," "content upgrade," "downloadable," "ebook," "cheat sheet," "checklist," "template download," "opt-in," "freebie," "PDF download," "resource library," "content offer," "email capture content," "Notion template," "spreadsheet template," or "what should I give away for emails." Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tool-strategy. For writing the actual content, see copywriting. For the email sequence after capture, see email-sequence. |
+| `free-tool-strategy` | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions "engineering as marketing," "free tool," "marketing tool," "calculator," "generator," "interactive tool," "lead gen tool," "build a tool for leads," "free resource," "ROI calculator," "grader tool," "audit tool," "should I build a free tool," or "tools for lead gen." Use this whenever someone wants to build something useful and give it away to attract leads or earn links. For downloadable content lead magnets (ebooks, checklists, templates), see lead-magnets. |
+| `referral-program` | When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch-strategy. |
+| `paid-ads` | When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see page-cro. |
+| `revops` | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy. |
+| `sales-enablement` | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email. |
+
 
 ---
 
 ## 3. Process Orchestrators
 
-Python scripts that take over session flow. Invoke immediately -- they orchestrate their own exploration and direct what happens next. Do not analyze before invoking; the skill drives the process.
-
-| Skill | When to Use |
+| Skill | Description |
 |---|---|
-| `codebase-analysis` | Codebase understanding, architecture comprehension, repo orientation |
-| `decision-critic` | Stress-test decisions and reasoning |
-| `deepthink` | Structured reasoning for open-ended analytical questions |
-| `problem-analysis` | Problem analysis, root cause investigation |
-| `prompt-engineer` | Prompt optimization |
-| `refactor` | Refactoring analysis, technical debt review, code quality improvement |
+| `codebase-analysis` | Invoke IMMEDIATELY via python script when user requests codebase understanding, architecture comprehension, or repository orientation. Do NOT explore first - the script orchestrates exploration. |
+| `decision-critic` | Invoke IMMEDIATELY via python script to stress-test decisions and reasoning. Do NOT analyze first - the script orchestrates the critique workflow. |
+| `deepthink` | Invoke IMMEDIATELY via python script when user requests structured reasoning for open-ended analytical questions. Do NOT explore first - the script orchestrates the thinking workflow. |
+| `problem-analysis` | Invoke IMMEDIATELY via python script when user requests problem analysis or root cause investigation. Do NOT explore first - the script orchestrates the investigation. |
+| `prompt-engineer` | Invoke IMMEDIATELY via python script when user requests prompt optimization. Do NOT analyze first - invoke this skill immediately. |
+| `refactor` | Invoke IMMEDIATELY via python script when user requests refactoring analysis, technical debt review, or code quality improvement. Do NOT explore first - the script orchestrates exploration. |
 
 ---
 
 ## 4. Workflow Discipline
 
-Skills that enforce a specific development practice or process rule. Load before starting the corresponding activity.
-
-| Skill | When to Use |
+| Skill | Description |
 |---|---|
-| `brainstorming` | Before any creative work: creating features, building components, adding functionality, modifying behavior |
-| `writing-plans` | When you have a spec/requirements for a multi-step task, before touching code |
-| `executing-plans` | When you have a written implementation plan to execute with review checkpoints |
-| `subagent-driven-development` | Executing implementation plans with independent tasks in the current session |
-| `dispatching-parallel-agents` | 2+ independent tasks that can be worked on without shared state |
-| `test-driven-development` | Before writing implementation code for any feature or bugfix |
-| `systematic-debugging` | When encountering any bug, test failure, or unexpected behavior |
-| `requesting-code-review` | When completing tasks, implementing major features, or before merging |
-| `receiving-code-review` | When receiving code review feedback, before implementing suggestions |
-| `verification-before-completion` | Before claiming work is complete, fixed, or passing |
-| `finishing-a-development-branch` | When implementation is complete, deciding how to integrate (merge, PR, cleanup) |
-| `using-git-worktrees` | Starting feature work that needs isolation from current workspace |
-| `writing-skills` | Creating new skills, editing existing skills, verifying skills work |
-| `using-superpowers` | Session start: establishes how to find and use skills |
-| `context-engineering` | Structuring context, memory, and information for LLM consumption |
-| `incoherence` | Detect and resolve incoherence in docs, code, specs vs. implementation |
-| `simplify` | Review changed code for reuse, quality, efficiency |
-| `planner` | Interactive planning and execution for complex tasks |
+| `brainstorming` | You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation. |
+| `grill-me` | Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, get grilled on their design, or mentions "grill me". |
+| `writing-plans` | Use when you have a spec or requirements for a multi-step task, before touching code |
+| `executing-plans` | Use when you have a written implementation plan to execute in a separate session with review checkpoints |
+| `subagent-driven-development` | Use when executing implementation plans with independent tasks in the current session |
+| `dispatching-parallel-agents` | Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies |
+| `test-driven-development` | Use when implementing any feature or bugfix, before writing implementation code |
+| `systematic-debugging` | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes |
+| `requesting-code-review` | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
+| `receiving-code-review` | Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation |
+| `verification-before-completion` | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always |
+| `finishing-a-development-branch` | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup |
+| `using-git-worktrees` | Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verification |
+| `writing-skills` | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
+| `using-superpowers` | Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions |
+| `context-engineering` | Use when starting a session, switching tasks, or needing project context. Also use when you catch yourself about to ask a question the project docs might answer, or when you're about to jump into implementation without understanding the codebase. |
+| `incoherence` | Detect and resolve incoherence in documentation, code, specs vs implementation. |
+| `planner` | Interactive planning and execution for complex tasks. IMMEDIATELY invoke when user asks to use planner. |
 
 ---
 
 ## 5. Platform Tools
 
-Built-in Anthropic skills for file format operations, plus utility skills for Claude Code configuration and integrations.
-
-| Skill | When to Use |
+| Skill | Description |
 |---|---|
-| `anthropic-skills:pdf` | Read, create, merge, split, rotate, watermark, OCR, fill forms, encrypt/decrypt PDFs |
-| `anthropic-skills:pptx` | Create, read, edit, combine PowerPoint presentations |
-| `anthropic-skills:docx` | Create, read, edit Word documents with formatting |
-| `anthropic-skills:xlsx` | Create, read, edit spreadsheets (.xlsx, .csv, .tsv) |
-| `anthropic-skills:schedule` | Create scheduled tasks that run on demand or on an interval |
-| `anthropic-skills:skill-creator` | Create new skills, modify existing, run evals, benchmark performance |
-| `update-config` | Configure Claude Code harness: hooks, permissions, env vars, settings.json |
-| `keybindings-help` | Customize keyboard shortcuts, rebind keys |
-| `loop` | Run a prompt or slash command on a recurring interval |
-| `schedule` | Create, update, list, or run scheduled remote agents on a cron schedule |
-| `claude-api` | Build apps with the Claude API or Anthropic SDK |
-| `cc-history` | Analyze Claude Code conversation history files |
-| `doc-sync` | Synchronize docs across a repository |
-| `arxiv-to-md` | Convert arXiv papers to LLM-consumable markdown |
+| `cc-history` | Reference documentation for analyzing Claude Code conversation history files |
+| `doc-sync` | Synchronizes docs across a repository. Use when user asks to sync docs. |
+| `arxiv-to-md` | Convert arXiv papers to LLM-consumable markdown. Invoke when user provides an arXiv ID or URL, or when syncing academic papers from a PDF folder to a markdown destination. |
 
 ---
+
+<!-- AUTOGEN:END -->
 
 ## Two-Pass Workflow for Marketing
 
