@@ -203,7 +203,7 @@ This file provides guidance to Claude Code when working in this vault.
 git clone git@github.com:sachio222/<slug>-vault.git \
   ~/Agents/Workspaces/<parent>/<VaultName>
 
-# optional: re-create the Goldilocks plugin symlink
+# Re-create the Goldilocks plugin symlink (standard on all based-stack vaults)
 ~/dev/obsidian-plugins/obsidian-goldilocks-essentials/install-in-vault.sh \
   ~/Agents/Workspaces/<parent>/<VaultName>
 \```
@@ -260,10 +260,13 @@ One paragraph explaining purpose + a short list of what belongs there. See any e
    git init
    # Ask user to confirm remote creation via gh: gh repo create sachio222/<slug>-vault --private --source . --push
    ```
-7. **Optionally install the Goldilocks plugin symlink** if the user has it at `~/dev/obsidian-plugins/obsidian-goldilocks-essentials/`:
+7. **Install the Goldilocks plugin symlink** (standard on every based-stack vault — do this by default, no need to ask):
    ```bash
-   ~/dev/obsidian-plugins/obsidian-goldilocks-essentials/install-in-vault.sh <VaultPath>
+   if [ -x ~/dev/obsidian-plugins/obsidian-goldilocks-essentials/install-in-vault.sh ]; then
+     ~/dev/obsidian-plugins/obsidian-goldilocks-essentials/install-in-vault.sh <VaultPath>
+   fi
    ```
+   If the install script is missing on this machine, skip silently and mention it in the post-scaffold summary so the user can restore it later. Do not abort the scaffold over a missing plugin.
 
 ## After scaffolding
 
