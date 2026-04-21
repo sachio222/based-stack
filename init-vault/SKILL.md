@@ -14,6 +14,7 @@ Ask (one question at a time, multiple-choice preferred):
    - **Per-project** (like LanguageAcademy) — full `projects/{product, marketing, seo, geo, strategy}/`, `notes/`, `reference/`, `Resources/` layout. Best for a single product or business initiative with a sibling code repo.
    - **Knowledge / research** — `notes/`, `reference/{books, frameworks, research}/`, optional `projects/` for investigations. Best for focused research or a subject-matter vault.
    - **Topical personal** (like Main) — user-defined category folders. Best when the vault hosts many unrelated workstreams.
+   - **Second brain / PKM** — PARA (`00 Inbox/`, `01 Projects/`, `02 Areas/`, `03 Resources/`, `04 Archive/`) + `Daily/` + `MOCs/`. The popular BASB + LYT hybrid seen in "my Obsidian setup" threads on X. Best for personal knowledge management, journaling, and capture-heavy workflows. Ships more starter content than the other variants so a fresh clone is usable on day one.
 3. **Location** — under `~/Agents/Workspaces/Development/` (per-project default) or `~/Agents/Workspaces/` directly (topical default). Allow override.
 4. **Paired code repo?** — if per-project, ask whether there's a sibling at `~/dev/<slug>/`. If yes, note it in the vault's CLAUDE.md + WORKSTATE for cross-referencing.
 5. **Git init?** — default yes. Private repo on the user's GitHub under `sachio222` naming pattern `<slug>-vault`. Confirm with user before creating/pushing.
@@ -63,6 +64,53 @@ Ask (one question at a time, multiple-choice preferred):
 Topical vaults skip `projects/`, `Resources/`, and `DESIGN.md`; they use user-named category folders instead (e.g., `Creative/`, `Development/`, `Gaming/`, `Hardware/`, `System/`, `Writing/`).
 
 Knowledge vaults skip `projects/` and `Resources/`; keep `reference/` as the hub.
+
+Second-brain / PKM vaults replace the `projects/ notes/ reference/` trio with a PARA-based layout — see the dedicated section below.
+
+### Second-brain / PKM layout
+
+The layout below is the PARA + Daily Notes + MOCs hybrid popular in Obsidian X/Twitter threads. Actionability decreases left-to-right across the PARA folders: Projects (active with a deadline) → Areas (ongoing responsibility) → Resources (topic reference) → Archive (inactive). Daily Notes handle capture, MOCs handle navigation, `00 Inbox/` holds fleeting captures until the weekly review.
+
+```
+<VaultName>/
+├── .obsidian/                        # empty — Obsidian populates on first open
+├── README.md
+├── CLAUDE.md
+├── ARCHITECTURE.md
+├── CHANGELOG.md
+├── WORKSTATE.md
+├── <VaultName>.md                    # home dashboard MOC
+│
+├── 00 Inbox/                         # fleeting captures — process weekly
+│   └── README.md
+├── 01 Projects/                      # PARA P — active, with a deadline
+│   └── README.md
+├── 02 Areas/                         # PARA A — ongoing responsibility
+│   └── README.md
+├── 03 Resources/                     # PARA R — topic-based reference
+│   └── README.md
+├── 04 Archive/                       # PARA A — completed / inactive
+│   └── README.md
+│
+├── Daily/                            # YYYY-MM-DD daily notes
+│   └── README.md
+├── MOCs/                             # Maps of Content — curated entry points
+│   ├── README.md
+│   └── Home.md
+└── Attachments/
+    └── README.md
+```
+
+**Conceptual sources (all mainstream in Obsidian PKM circles on X):**
+
+- **PARA** — Tiago Forte's *Building A Second Brain*. File by actionability, not topic.
+- **Daily Notes** — universal capture layer; one dated note per day.
+- **MOCs** — Nick Milo's *Linking Your Thinking*. Notes-of-links as curated entry points, used when a subject accumulates 5+ notes.
+- **Inbox** — Getting-Things-Done legacy; weekly review routes captures into the right PARA folder or trash.
+
+**Numbering.** The `00 / 01 / 02 / 03 / 04` prefixes are an Obsidian-on-X convention that keeps PARA folders top-of-tree in stable sort order. Non-PARA utility folders (`Daily/`, `MOCs/`, `Attachments/`) sit below without prefixes so they read as distinct from the PARA system.
+
+**Shareability goal.** This variant ships more starter content than the others — a pre-populated home MOC, PARA-folder READMEs with filing rules, a `Home.md` MOC, and a `CLAUDE.md` that describes the capture → file → archive workflow. A fresh clone is usable on day one without the new owner having to design anything.
 
 ### Topical-vault software/tools documentation pattern
 
@@ -348,6 +396,72 @@ Start here: **[[WORKSTATE]]** (what's active) and **[[README]]** (layout).
 ### Per-folder READMEs
 
 One paragraph explaining purpose + a short list of what belongs there. See any existing based-stack vault (LanguageAcademy, OrchestratedOncology) for reference examples — don't reinvent.
+
+### Second-brain starter files
+
+For PKM vaults, ship real starter content so a clone is immediately useful.
+
+**`<VaultName>.md` (home dashboard)**
+
+```markdown
+# <VaultName>
+
+<One-line description: who this vault is for / what it's for.>
+
+> **How this is organized:** PARA (Projects / Areas / Resources / Archive) for filing + Daily Notes for capture + MOCs for navigation. Read [[CLAUDE]] for the workflow.
+
+## Today
+
+- [ ] Open [[Daily/<today>|today's daily note]]
+- [ ] Process [[00 Inbox/README|inbox]] (aim: weekly)
+
+## Active
+
+- [[01 Projects/README|Projects]] — deadline-driven work
+- [[02 Areas/README|Areas]] — ongoing responsibilities
+
+## Reference
+
+- [[03 Resources/README|Resources]] — topic-based notes
+- [[MOCs/Home|Home MOC]] — curated entry points
+
+## Cold storage
+
+- [[04 Archive/README|Archive]] — done, dropped, or dormant
+```
+
+**`MOCs/Home.md` (top-level Map of Content)**
+
+```markdown
+# Home MOC
+
+Top-level Map of Content. An MOC is a curated note-of-links — use it as a front door into a subject once that subject has 5+ notes.
+
+## How to use
+
+Link back to this MOC from any note that fits a subject below. When a section grows past ~10 entries, promote it into its own MOC (e.g., `MOCs/Writing.md`, `MOCs/Reading.md`).
+
+## Subjects
+
+- _(empty — populate as the vault grows)_
+```
+
+**PARA + utility folder READMEs — one-paragraph filing rules**
+
+- `00 Inbox/README.md` — Fleeting captures and unsorted notes. Everything lands here first. **Process weekly:** route each note to `01 Projects/`, `02 Areas/`, `03 Resources/`, or delete. Empty inbox = reviewed brain.
+- `01 Projects/README.md` — **Active work with a deadline.** A project has a defined end state. When done, move the folder to `04 Archive/`. One folder per project; name as `YYYY-MM — <Project>` for chronological sort.
+- `02 Areas/README.md` — **Ongoing responsibilities with no end date.** Health, finances, home, a specific role. Areas are maintained, not completed. If an area spawns a deadline-driven effort, that effort becomes a Project.
+- `03 Resources/README.md` — **Topic-based reference** you pull from. Books, research, recipes, how-to. Not tied to a specific Project or Area.
+- `04 Archive/README.md` — **Inactive items** from the other three folders. Searchable history; only delete when certain you won't want it back.
+- `Daily/README.md` — One dated note per day, `YYYY-MM-DD.md`. Use Obsidian's Daily Notes core plugin or Templater for a template.
+- `MOCs/README.md` — Maps of Content. Create one when a subject accumulates 5+ notes and you want a curated front door. Link from `[[Home]]` downward.
+- `Attachments/README.md` — Shared images and binaries embedded across the vault.
+
+**CLAUDE.md additions (second-brain workflow)**
+
+Include this section under `## Conventions` in the generated CLAUDE.md:
+
+> **Capture → File → Archive workflow.** Write fleeting thoughts into `00 Inbox/` or a `Daily/YYYY-MM-DD.md` note. During weekly review, move notes out of Inbox into `01 Projects/` (deadline-driven), `02 Areas/` (ongoing), or `03 Resources/` (topic reference) — or delete them. When a project or area goes inactive, move the whole folder to `04 Archive/`. Build an MOC (`MOCs/<Subject>.md`) when a subject accumulates 5+ notes and you want a curated front door.
 
 ## Steps to execute
 
