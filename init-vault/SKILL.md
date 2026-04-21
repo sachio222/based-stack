@@ -60,9 +60,111 @@ Ask (one question at a time, multiple-choice preferred):
     └── Marketing/
 ```
 
-Topical vaults skip `projects/`, `Resources/`, and `DESIGN.md`; they use user-named category folders instead (e.g., `Creative/`, `Development/`, `Gaming/`, `System/`, `Writing/`).
+Topical vaults skip `projects/`, `Resources/`, and `DESIGN.md`; they use user-named category folders instead (e.g., `Creative/`, `Development/`, `Gaming/`, `Hardware/`, `System/`, `Writing/`).
 
 Knowledge vaults skip `projects/` and `Resources/`; keep `reference/` as the hub.
+
+### Topical-vault software/tools documentation pattern
+
+Topical vaults commonly accumulate software-install / tools docs (media players, photo viewers, DAWs, editors, backups, etc.). Two conventions that travel together.
+
+**1. Consume vs. produce split.** When a topical vault hosts software docs, split them along a clear axis:
+
+- **Consume / system** (suggested folder: `System/`) — apps for *using* or administering: media players, photo/image viewers, file managers, backups, remote access, security tools, specs. Example docs: `Media-Players.md`, `Photo-Viewers.md`, `File-Managers.md`, `Video-Libraries.md`.
+- **Produce / create** (suggested folder: `Creative/`) — apps for *making*: photo editors, audio/DAW tools, video editors, drawing/graphics, animation, product design, writing. Example docs: `Photo-Tools.md`, `Music-Audio-Tools.md`, `Video-Tools.md`, `Drawing-Graphics-Tools.md`, `Animation-Tools.md`, `Writing-Tools.md`.
+
+Each doc cross-links its counterpart (e.g., a "Media Players" doc points to "Music-Audio Tools" for DAWs; a "Photo Viewers" doc points to "Photo Tools" for RAW editors). When the user asks for a "[domain] tools" doc, first pick the axis — is this for consuming or producing? — and place it in the matching folder.
+
+Do not pre-create `System/` or `Creative/` during init; let the user name their own top-level folders. Apply the axis only when populating docs.
+
+**2. Six-part install-guide template.** Every software/tools doc inside a topical vault follows this layout:
+
+1. **System-context header** — one-line machine/OS summary + any specs-driven caveats ("Cycles CPU only", "iGPU bottleneck", "Wayland only", etc.).
+2. **"Install most at once" bulk-install block** — grouped install lines: official repos first (`pacman`/`apt`/`brew`), then AUR/community (`yay`/`paru`), then Flatpak / upstream binary last. Lets the user paste and install the whole category at once.
+3. **Claude integrations summary table** — placed near the top, before per-tool sections. Columns: **Tool · Integration type · Link**. Mark widely-used integrations with ★ and flag **official-from-vendor MCPs** separately from community ones. Explicitly note which tools have no integration ("Nothing reputable found for X, Y, Z").
+4. **Per-tool sections** — each tool gets `### Name`, a short description (what it's best for, who it's aimed at), bulleted links (Site, Docs, GitHub, **Claude integration:** if any), then the install snippet.
+5. **Verify-installs block** at the end:
+   ```bash
+   for p in pkg1 pkg2 pkg3; do pacman -Q "$p" 2>/dev/null || echo "$p: not installed"; done
+   ```
+6. **Cross-references use Obsidian wiki-links** — `[[Note#Heading]]` for section targets, `[[Note#Heading|display]]` inline. Mark cross-domain references with ↪ when a tool's "home" section lives in another doc.
+
+**3. Consumer-doc variant (consume-side docs).** When a doc is about *consuming* (players, viewers, library managers), prepend two sections before the bulk-install block:
+
+- **"The problem this doc fixes"** — one or two paragraphs on what's confusing about the defaults (e.g., "macOS has Photos.app doing two jobs; Linux splits it across viewer + library manager"). Orients the reader before the install list.
+- **"Pick a vibe"** — a short table that helps the user choose by mood / use-case rather than feature matrix. Columns: **Vibe · Pick · Notes**. Bold the headline recommendation per row.
+
+Example vibe-table shape:
+
+```markdown
+| Vibe                           | Pick           | Notes                                  |
+|--------------------------------|----------------|----------------------------------------|
+| **Apple Photos / Lightroom**   | digiKam        | Heavy, Qt/KDE, faces/geotags/tags/RAW  |
+| Simpler library manager        | Shotwell       | GNOME, events-by-date, clean and fast  |
+| **Minimal Preview.app feel**   | qView          | Qt, opens instantly, keyboard-driven   |
+```
+
+**4. Starter skeleton.** If the user asks for a new software doc during (or after) vault init, scaffold it with this skeleton — fill in content, don't leave placeholders in the final doc:
+
+```markdown
+# <Category> <Players|Viewers|Tools|Editors>
+
+System: <OS/distro> · <DE/compositor>
+<One-sentence scope. For <opposite axis>, see [[../<OtherFolder>/<OtherDoc>]].>
+
+## The problem this doc fixes      <!-- consume-side only -->
+
+<Why the defaults are confusing and what this doc solves.>
+
+## Pick a vibe (the short version) <!-- consume-side only -->
+
+| Vibe | Pick | Notes |
+|------|------|-------|
+| …    | …    | …     |
+
+## Recommended install (cover all bases)
+
+\```bash
+sudo pacman -S <pkg1> <pkg2>
+\```
+
+\```bash
+paru -S <aur-pkg>
+flatpak install -y flathub <flathub-id>
+\```
+
+## Claude integrations
+
+| Tool | Integration | Link |
+|------|-------------|------|
+| …    | …           | …    |
+
+## <Tool A>
+
+<Short description — best for, aimed at whom.>
+- Site: <url>
+- Docs: <url>
+- GitHub: <url>
+- **Claude integration:** <if any>
+
+\```bash
+sudo pacman -S <pkg>
+\```
+
+## Verify installs
+
+\```bash
+for p in <pkg1> <pkg2>; do pacman -Q "$p" 2>/dev/null || echo "$p: not installed"; done
+\```
+```
+
+**Non-negotiables for software/tools docs:**
+
+- Verify package names against `pacman -Si` / `yay -Si` (or the platform equivalent) before writing. Never invent package names.
+- Curl-check any GitHub URLs for community MCPs before citing them.
+- Prefer official repos → AUR → Flatpak → upstream binary, in that order.
+- When an AUR build is known to fail, flag it and give a working alternative (e.g., Flatpak).
+- Never omit the verify-installs loop — it's how the user confirms the paste actually landed.
 
 ## Canonical file contents
 
