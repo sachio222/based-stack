@@ -1,12 +1,22 @@
 ---
 name: writing-voice
-description: Write prose in the user's published voice (Jake Krajewski / medium.com/@jakekrajewski) — conversational-technical, second-person, rhetorical-question openers, reassuring-guide tone. Invoke when the user asks for an essay, article, blog post, long-form note, or rewrite in his voice. Do NOT invoke for code, terse chat replies, or bullet-style reference/cheatsheet docs.
+description: Write prose in the user's published voice (Jake Krajewski / medium.com/@jakekrajewski) — warm-tutor register, peer-not-authority, goofy-specific asides, personifies tools, acknowledges reader frustration directly. Invoke when the user asks for an essay, article, blog post, long-form note, or rewrite in his voice. Do NOT invoke for code, terse chat replies, or bullet-style reference/cheatsheet docs.
 ---
 
 # Writing Voice — Jake Krajewski
 
 The user publishes on Medium as Jake Krajewski. When writing prose for
 him, match this voice by default.
+
+## How to invoke this skill
+
+**Step 1. Read [`references/voice-samples.md`](references/voice-samples.md) FIRST.** That file contains two complete published Medium articles verbatim. The samples are the source of truth. The fingerprint below describes the voice in self-aware terms — it is a recipe, not the meal. Calibrate against the prose, not the description.
+
+**Step 2.** Then skim the Fingerprint, Defaults, and Anti-patterns sections of this file. They're useful checklists, but where they conflict with the samples, *the samples win*. Past failures of this skill came from following the fingerprint mechanically without reading samples — produces voice-cosplay, not voice.
+
+**Step 3.** Draft. Then run the Editing checklist.
+
+> **Calibration warning.** Both samples in `voice-samples.md` are tutorial/explainer genre (Dec 2019 / Jan 2020). When writing in a different genre — opinion, LinkedIn post, cover letter, essay — preserve the *attitude* (warm, peer-not-authority, goofy-specific asides, reassuring) but adapt structure to the genre. Do not force tutorial structure onto opinion writing.
 
 ## When to apply
 
@@ -27,48 +37,39 @@ him, match this voice by default.
 
 ## Fingerprint (paste this when briefing another model)
 
-Conversational technical writing with a reassuring-guide tone. Heavy
-second-person "you." Short punchy sentences alternating with longer
-explanatory ones. Rhetorical questions as openers and pivots. Light
-self-aware humor, never snarky. Explains hard things by positioning
-the reader as smart-but-stuck, then walking them through it without
-condescension. Bridges expert concepts to practical application.
+Warm-tutor register with reassuring-guide tone. Peer-not-authority — Jake writes as someone who recently figured this out himself and remembers being stuck. Goofy-specific asides ("the intermittent frequency of cricket — Acheta domesticus — chirps at moonrise"), absurd-but-precise. Personifies tools and frameworks ("PyTorch on the other hand, thinks you want…", "make up and be friends again"). Directly acknowledges reader frustration ("if it throws up at you and you're yelling at your computer right now, breathe. It's OK."). First-person and second-person both used freely and often. Rhetorical questions throughout — as opens, as section pivots, as transitions. Sentences are mostly medium-length and conversational; short fragments are rare, not dominant. Endings *settle* warmly ("That's it!", "I hope this tutorial helped"), they don't *land* dramatically.
 
 ## Defaults
 
-- **Open with a rhetorical question, a setup-and-deflate, or a
-  direct scene.** Never "In this article" or "Let's explore."
-- **Second-person ("you") is the default POV.** Use "I" sparingly
-  and on purpose. Almost never "we."
-- **Mix sentence lengths.** Short sentences land judgments and
-  pivots. Long sentences carry explanations. Fragments are allowed
-  when they land. ("It hasn't.")
-- **Em-dashes — with spaces — for inline asides.** Heavy use.
-- **Parentheticals for clarification.** (Like this.) Sparingly.
-- **Bold the single word worth remembering,** not every other one.
-  Italics for beat emphasis ("It *didn't* tell you").
-- **Section endings land.** Use a callback, a dry one-liner, or a
-  payoff sentence. Never "in conclusion."
+- **Open with a rhetorical question, a setup-and-deflate, a direct scene, or a "Preface" / casual stage-set ("I'll be walking through…").** Never "In this article" or "Let's explore."
+- **Both first-person AND second-person are default POVs.** "I'll address what an autoencoder is" + "You might be asking" both appear naturally. Use "we" for the inclusive walk-through ("we'll grab MNIST", "we'll put together a basic network") — this is one of the few writers where "we" is correct.
+- **Sentence rhythm is conversational-medium, not punchy.** Most sentences run 15-30 words with embedded clauses. Reserve short fragments ("Done.", "That's it.", "Just kidding.") for genuine punctuation moments — typically 1-2 per section, not every paragraph.
+- **Parentheticals are the dominant inline-aside form** (like this). Em-dashes — with spaces — are used too, but less than the fingerprint of a more "essayistic" writer would suggest. When in doubt, prefer the parenthetical.
+- **Trailing ellipses for tonal softening.** "No, really…" "OK… I guess." "Please…" Signals a held-breath, a soft retreat from a strong claim, or a conversational sigh. Sparingly but distinctively.
+- **Bold for headers, labels, and step markers** ("**Step 1.**", "**Note:**", "**Example 2:**"). Almost never bold a single word inline. Italics for emphasis on a single word ("see things *her* way") is fine but rare.
+- **Goofy-specific asides earn their keep.** When introducing a hard concept, look for the absurd-but-precise comparison — moon phases, cricket Latin names, "throw up at you", "head-scratching errors". One per section, often two.
+- **Personify the tool.** PyTorch has moods. Linux's kernel has opinions. The interpreter shouts at you. This dramatizes the user's confusion without blaming them.
+- **Acknowledge reader frustration explicitly.** "If you're yelling at your computer right now, breathe." This is the single most distinctive emotional move in the voice.
+- **Section endings settle warmly.** "That's it!" "Now we're talking!" "I hope this helped." "Make up and be friends again." Closings are encouraging, not punchy.
 
-## Verbal tics to reach for (sparingly)
+## Verbal tics actually attested in the samples
 
-"For starters…" · "Here's what to do instead." · "Here's the thing." ·
-"Fair warning:" · "Worth knowing." · "You'd think X. You'd be wrong
-more often than you'd like." · "Criminally underused." · "Welcome to
-[topic]."
+"For starters…" · "Just kidding, it's not that simple." · "OK… I guess." · "No, really…" · "So basically…" · "Probably going to use X because it's generic and simple." · "Suffice it to say…" · "What about X you say?" · "Now we're talking!" · "Done." · "That's it!" · "Why tho?" · "I hope this tutorial helped."
 
-One per section, tops. They lose power fast.
+One or two per section. They lose power fast — but the warm-tutor voice depends on a few of them appearing naturally throughout.
 
 ## Anti-patterns — do NOT
 
 - "Let's dive into…" / "In this article…" / "In today's post…"
-- "We" as the default POV.
 - Academic hedging ("it could be argued," "some would say").
 - Throat-clearing before the first real sentence of content.
 - Emojis in headings or body (unless a specific piece earns it).
-- Heavy bolding for its own sake.
+- Heavy bolding for its own sake (especially inline single-word bolding).
 - Bullet lists where prose would carry more voice.
-- Closing with a disclaimer or summary.
+- Closing with a disclaimer or summary ("In conclusion…").
+- **Stacking dry one-liner mic-drops at section endings.** This is the failure mode of mechanically applying an "essayist" voice template to Jake's actual warm-tutor voice. Endings should settle, not land.
+- **Forcing punchy short sentences as the dominant rhythm.** Short fragments are accents, not the beat.
+- Confident-pronouncement tone. Jake writes as the friend who figured it out one step ahead of you, not as the authority telling you how it is.
 
 ---
 
@@ -97,15 +98,15 @@ Four proven scaffolds to paste and riff on:
 ## Editing checklist (run before finalizing)
 
 - [ ] Opening earns the first ten seconds. No throat-clearing.
-- [ ] Second-person as default; first-person used on purpose.
-- [ ] No "we." No "let's."
-- [ ] Short sentences land the big points.
-- [ ] Every bold/italic emphasis has been earned.
-- [ ] At least one prose section per header (no bulletpoint-itis).
-- [ ] Sections land, don't fizzle.
-- [ ] No "in conclusion."
-- [ ] One technical term per paragraph gets defined or grounded.
-- [ ] The reader is smarter at the end than they were at the start.
+- [ ] First- and second-person both present and natural; "we" used for inclusive walk-through where it fits.
+- [ ] At least one goofy-specific aside per section (cricket Latin name energy, not just "haha").
+- [ ] At least one moment of personifying the tool / acknowledging reader frustration somewhere in the piece.
+- [ ] Sentence rhythm is conversational-medium dominant; short fragments used as accents only.
+- [ ] Parentheticals deployed (often). Em-dashes used (less often).
+- [ ] Bold reserved for headers, labels, step markers — almost no inline single-word bolding.
+- [ ] At least one rhetorical question other than the opener (section pivot).
+- [ ] Closing settles warmly. Not a mic-drop one-liner.
+- [ ] Read it aloud. Does it sound like a friend who just figured this out, or like an essayist performing?
 
 ---
 
@@ -130,15 +131,10 @@ Re-read for calibration:
 
 ## Deeper references
 
-- [`references/opening-moves.md`](references/opening-moves.md) —
-  expanded opener patterns with examples.
-- [`references/formatting.md`](references/formatting.md) — formatting
-  habits (dashes, italics, parentheticals, tables vs prose).
-- [`references/sample-analysis.md`](references/sample-analysis.md) —
-  short excerpts from published work with commentary on moves.
-
-Canonical in-vault reference (richest version):
-`~/Agents/Workspaces/Main/Writing/Voice — Jake Krajewski.md`
+- [`references/voice-samples.md`](references/voice-samples.md) — **read this first.** Two complete published Medium articles, verbatim. The source of truth for this voice.
+- [`references/opening-moves.md`](references/opening-moves.md) — expanded opener patterns with examples.
+- [`references/formatting.md`](references/formatting.md) — formatting habits (dashes, italics, parentheticals, tables vs prose).
+- [`references/sample-analysis.md`](references/sample-analysis.md) — short excerpt fragments with commentary on moves. (Older, fragmentary — `voice-samples.md` is now the primary reference.)
 
 ---
 
