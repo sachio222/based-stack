@@ -1,0 +1,160 @@
+/* Clean professional resume / cover letter CSS — print-friendly, browser-renderable, ATS-ergonomic */
+
+@page {
+  size: letter;
+  margin: 0.75in 0.85in;
+}
+
+html, body {
+  background: white;
+  color: #111;
+  font-family: "Charter", "Iowan Old Style", "Georgia", "Cambria", serif;
+  font-size: 10.5pt;
+  line-height: 1.42;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen {
+  body {
+    max-width: 7.5in;
+    margin: 32px auto;
+    padding: 48px 56px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+    border-radius: 4px;
+  }
+}
+
+@media print {
+  body { box-shadow: none; padding: 0; margin: 0; }
+}
+
+h1 {
+  font-family: "Inter", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.15em;
+  color: #000;
+}
+
+h2 {
+  font-family: "Inter", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000;
+  margin: 1.4em 0 0.5em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #999;
+}
+
+h3 {
+  font-family: "Inter", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 11pt;
+  font-weight: 700;
+  margin: 1em 0 0.15em;
+  color: #000;
+}
+
+h3 + p {
+  margin-top: 0;
+}
+
+p, ul, ol {
+  margin: 0 0 0.55em;
+}
+
+ul, ol {
+  padding-left: 1.2em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+li > p {
+  margin: 0 0 0.25em;
+}
+
+strong, b {
+  color: #000;
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+a {
+  color: #0a4a8a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(10, 74, 138, 0.2);
+}
+
+@media print {
+  a { border-bottom: none; color: #000; }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+code {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.92em;
+  background: #f3f3f3;
+  padding: 0.05em 0.3em;
+  border-radius: 2px;
+}
+
+blockquote {
+  border-left: 2px solid #ccc;
+  margin: 0.6em 0;
+  padding: 0 0.9em;
+  color: #444;
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.6em 0;
+  font-size: 0.95em;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.3em 0.6em;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+th { font-weight: 700; }
+
+/* Resume-specific tightening */
+h2 + p { margin-top: 0.3em; }
+h3 + ul { margin-top: 0.3em; }
+
+/* Cover letter — slightly looser */
+body.cover-letter {
+  font-size: 11pt;
+  line-height: 1.55;
+}
+
+body.cover-letter h1 {
+  font-size: 14pt;
+  margin-bottom: 0.6em;
+}
+
+body.cover-letter p {
+  margin-bottom: 1em;
+}
+
+/* Avoid page breaks inside experience entries */
+h3, h3 + p, h3 + ul {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
