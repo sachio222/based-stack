@@ -2,7 +2,7 @@
 
 The team's standing memory of what we've learned the hard way. **Peek before acting on anything non-trivial.** Update on session close (same hygiene pass as WORKSTATE). Each entry is one line + a pointer to where the detail lives — don't duplicate content; cross-link. Stale entries get a ~~strikethrough~~ + date + reason, never silent deletion.
 
-**Founded {{DATE}} by CoS-Genesis.** Seeded with the cross-project lessons that transfer from the porto team (they were paid for once already — don't pay again) + {{PROJECT}}'s known hazards. The team grows the project-specific sections as it ships.
+**Founded {{DATE}} by CoS-Genesis.** Seeded with hard-won cross-project lessons (paid for once already — don't pay again) + {{PROJECT}}'s known hazards. The team grows the project-specific sections as it ships.
 
 ## Discipline (how to keep this file honest)
 - One line per lesson + a pointer (memory, ticket, git SHA, file). The detail lives there.
@@ -18,8 +18,8 @@ The team's standing memory of what we've learned the hard way. **Peek before act
 - **Tracker:** {{TRACKER}}; write tools {{TRACKER_WRITE}}. — *Evidence: verified {{DATE}}.*
 - {{Project-specific settled facts — known hazards, frozen ids, the product invariant's mechanism, etc.}}
 
-## Mistakes + lessons (ported — paid for on porto; don't re-pay)
-- **Don't bake an ambient-context email into a convention.** On porto an ambient email got baked in → 30 misattributed commits + a 41-commit history rewrite. Identity is verify-with-source class.
+## Mistakes + lessons (paid for once already; don't re-pay)
+- **Don't bake an ambient-context email into a convention.** An ambient email baked into convention once → 30 misattributed commits + a history rewrite. Identity is verify-with-source class.
 - **One paste unit, always.** A brief relayed separately from its handoff silently dropped. Amendments go IN the boot block, not as a follow-up message ("Relay-gap").
 - **A code-reading hypothesis is not a fact.** Relaying unverified code-reading as fact burns trust. Frame findings as hypotheses; re-grep live code before fixing a reported bug (it sometimes lives in dead/archived code).
 - **Re-validate inherited known-unknowns before writing them into a handoff.** A stale "risk" made a successor stall on a non-issue. Verify or label `ASSUMPTION:`.

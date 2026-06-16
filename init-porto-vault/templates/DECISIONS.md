@@ -2,7 +2,7 @@
 
 The citable register of decisions the team treats as settled. Cite them by § number in handoffs, tickets, and proposals. To overturn one, re-litigate explicitly and annotate the entry (strikethrough + date + reason) — never silently.
 
-**Founded {{DATE}} by CoS-Genesis.** §1–§7 are the governance foundation ported from the porto team's operating principles + grounded in {{PROJECT}}'s product. The team adds product/strategy/architecture decisions below as they accrue (§8+).
+**Founded {{DATE}} by CoS-Genesis.** §1–§7 are the governance foundation — the operating principles every role works under, grounded in {{PROJECT}}'s product. The team adds product/strategy/architecture decisions below as they accrue (§8+).
 
 ---
 
@@ -24,7 +24,7 @@ Before any claim enters a handoff/boot-block, check it against the settled-facts
 External integrations — the issue tracker / MCP, GitHub, local services — **degrade, they don't hard-break the loop.** No single-point-of-failure that wedges the team if a tool is down. Build the seam for absence.
 
 ### §6 — {{PRODUCT_INVARIANT_TITLE}} ({{PROJECT}}'s core invariant)
-*{{Fill with the project's core quality invariant — the one thing the product lives or dies on — and the rule it imposes on engineering. Example (nvmber5): "Trustworthy-with-receipts — never change calculation/statement logic in isolation; validate controls + reconciliation LIVE (running app, real scenario), not just fixtures, because the dual-engine hazard hides render-time drift behind green tests." Example (porto): "security review on auth/secret/path/multi-tenant surfaces before merge." If the project has NO such invariant, change this heading to **§6 — (reserved; no product-specific invariant for this project)** and remove the §6 trust-gate lines in LOOP-PROTOCOL / the boot-blocks. **Do NOT renumber** — §7 and every cross-reference to it must stay stable.}}*
+*{{Fill with the project's core quality invariant — the one thing the product lives or dies on — and the rule it imposes on engineering. Example (a financial-modeling app): "never change calculation/statement logic in isolation; validate controls + reconciliation LIVE (running app, real scenario), not just fixtures, because parallel calc engines can hide render-time drift behind green tests." Example (a security-sensitive app): "a security-review pass on auth/secret/path/multi-tenant surfaces before merge." If the project has NO such invariant, change this heading to **§6 — (reserved; no product-specific invariant for this project)** and remove the §6 trust-gate lines in LOOP-PROTOCOL / the boot-blocks. **Do NOT renumber** — §7 and every cross-reference to it must stay stable.}}*
 
 ### §7 — One commit per ticket; branch-build; no scope creep
 The Engineer builds on a branch, commits by explicit path (one commit per ticket — makes archaeology cheap), and never expands scope mid-ticket: discoveries become **filed follow-up tickets**, not silent additions. Merge happens at the gate, not during the build.

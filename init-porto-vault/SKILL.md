@@ -1,13 +1,13 @@
 ---
 name: init-porto-vault
-description: Use when the user wants to stand up (or replicate) a porto-style multi-agent team — a CoS/PM/Engineer/Product agent org with a build-loop, generational handoffs, and governance docs — inside a project vault, new or existing. Triggers include "init porto vault", "set up the porto team here", "I want the multi-agent team operating system for this project", "replicate the agent-lab team on <project>", "stand up CoS/PM/engineer/product agents".
+description: Use when the user wants to stand up a multi-agent team operating system — a CoS/PM/Engineer/Product agent org with a build-loop, generational handoffs, and governance docs — inside a project vault, new or existing. Triggers include "init porto vault", "set up the agent team here", "I want the multi-agent team operating system for this project", "spin up a CoS/PM/engineer/product team", "stand up CoS/PM/engineer/product agents".
 ---
 
 # init-porto-vault
 
 ## Overview
 
-Stands up a **multi-agent team operating system** inside a project's Obsidian vault: a CoS / PM / Engineering / Product agent org that runs a repeatable build-loop, rotates generations through outcome-shaped handoffs, and keeps its state in git-tracked governance docs. The pattern was proven on the `porto_agent_lab` team and is project-agnostic — this skill ports it to **any** project, new or existing.
+Stands up a **multi-agent team operating system** inside a project's Obsidian vault: a CoS / PM / Engineering / Product agent org that runs a repeatable build-loop, rotates generations through outcome-shaped handoffs, and keeps its state in git-tracked governance docs. It's a project-agnostic pattern — this skill stands it up for **any** project, new or existing.
 
 **Core principle:** the vault becomes both the product-strategy home AND the coordination layer for the team building it. The team operates on thin relays — **"go loop ×N"** (Engineer) · **"ratify"** (CoS) · **"check inbox"** (PM) — and every boundary crossing (handoff, ratification, kickoff) sources from primary artifacts, never a summary of a summary.
 
@@ -16,7 +16,7 @@ Stands up a **multi-agent team operating system** inside a project's Obsidian va
 ## When to use
 
 - The user wants a project run by a team of agents (CoS/PM/Engineer/Product) instead of ad-hoc sessions.
-- They reference porto / the agent-lab team and want "the same thing for X."
+- They've seen a multi-agent team setup work elsewhere and want the same for their project.
 - A vault exists (or will) and they want the loop + handoff + governance scaffolding.
 
 **Not for:** a one-off task; a project that just needs a CLAUDE.md; scaffolding a *plain* vault with no team (use `init-vault` for that).
@@ -28,7 +28,7 @@ Stands up a **multi-agent team operating system** inside a project's Obsidian va
 
 ## The procedure
 
-Four phases: **Survey → Resolve forks → Build → Verify.** Don't skip Survey — the whole point is to ground the OS in *this* project, not photocopy porto.
+Four phases: **Survey → Resolve forks → Build → Verify.** Don't skip Survey — the whole point is to ground the OS in *this* project, not photocopy a template.
 
 ### Phase 0 — Survey (gather; never guess)
 
@@ -42,7 +42,7 @@ Collect these before writing anything. Read the vault, the paired repo, and the 
 | **Repo gates** | `package.json` scripts / `Makefile` / `pyproject` / CI config | The merge gate runs these (typecheck/lint/test/build). |
 | **Issue tracker** | Linear MCP configured? GitHub issues? Just the vault? | The Engineer picks tickets from here; adapt the loop's pick + write-back step. |
 | **Product + spine** | vault docs, repo CLAUDE.md, tracker initiatives | Grounds the boot-blocks' "what this is" + the loop's execution focus + the north-star question. |
-| **Product invariant** | what's the core quality the product lives or dies on? | Becomes the §6 product gate (porto: security review; nvmber5: live reconciliation). May be none. |
+| **Product invariant** | what's the core quality the product lives or dies on? | Becomes the §6 product gate (e.g. a security-review gate on auth/secret changes; a live-reconciliation gate on financial-calc changes). May be none. |
 
 ### Phase 1 — Resolve forks (ask the human)
 
@@ -52,7 +52,7 @@ Use `AskUserQuestion`. Three genuine forks (everything else has a sensible defau
 2. **Which role boot-blocks now?** — *PM + Engineer + Product (full team; Product sits ready)* vs *just what they're spinning up*. The CoS is always you (genesis). Default: all three.
 3. **The product gate (§6)** — propose the project's core invariant as a verification gate (from Survey) and confirm, or confirm there's none. Don't invent one that doesn't fit.
 
-Other defaults you just apply (mention them): Engineer **builds directly** (not porto's in-room-agent/conductor split — see Adaptation); WORKSTATE is **live-state-only**; the relay vocab is **go loop / ratify / check inbox**.
+Other defaults you just apply (mention them): Engineer **builds directly** (no separate worker-agent split — see Adaptation); WORKSTATE is **live-state-only**; the relay vocab is **go loop / ratify / check inbox**.
 
 ### Phase 2 — Build
 
@@ -62,7 +62,7 @@ Other defaults you just apply (mention them): Engineer **builds directly** (not 
 4. **Write the org:** `agents/README.md` (from template), `agents/pm/INBOX.md` (from template), the three genesis boot-blocks (from `templates/genesis-boot-block.md`, one per role using the Role-fills table below), the small lineage READMEs + `reports/README.md` (generate from the specs below — they're trivial).
 5. **Wire existing docs** — for each, **edit if present, create from the canonical pattern if missing** (an existing vault may lack some). The **seed note** = the vault's landing/orientation note, usually `<VaultName>.md`. `WORKSTATE.md` → live-state-only + a `## Team` head; `CLAUDE.md` → read-first order (WORKSTATE→LESSONS→DECISIONS→LOOP-PROTOCOL→repo CLAUDE.md), the team model, the governance-commitments list, verified identity, and **delete any aspirational "living-docs auto-hook" line** (the CoS commits the vault — there is no hook); `README.md` + `ARCHITECTURE.md` + seed note → add the team + the new top-level docs + `agents/`/`reports/`.
 6. **Memory:** write one project memory (the team OS is stood up — roles, relay, key adaptation, the product gate) + a one-line `MEMORY.md` pointer, in `{{MEMORY_DIR}}`.
-7. **Commit** the scaffold (`Stand up porto-style multi-agent team OS (CoS-Genesis)`). The author is the verified `{{IDENTITY}}` (the human — never list them as a co-author). Append whatever co-author trailer *your environment* mandates (e.g. the Claude Code `Co-Authored-By` line from your global config), if any — don't invent one.
+7. **Commit** the scaffold (`Stand up the multi-agent team OS (CoS-Genesis)`). The author is the verified `{{IDENTITY}}` (the human — never list them as a co-author). Append whatever co-author trailer *your environment* mandates (e.g. the Claude Code `Co-Authored-By` line from your global config), if any — don't invent one.
 
 ### Phase 3 — Verify + hand back
 
@@ -97,16 +97,16 @@ The small READMEs are one paragraph each — generate them:
 - **New vs existing project.** No vault → `init-vault` first. Existing vault with content → layer onto it; don't clobber real notes; snapshot before editing.
 - **No code repo yet.** The loop still works — point `{{CODE_REPO}}` at the future repo and note "repo TBD"; the Engineer's first assignment becomes scaffolding it.
 - **Tracker varies.** Linear MCP present → use it (`save_issue`/`save_comment`). Else GitHub issues (`gh issue edit`/`comment`/`create`), or a vault-based `notes/backlog.md`. Adapt the loop's pick + write-back lines; the loop shape is identical. **Map the state vocabulary too** — "In Progress / Done at the gate" is Linear-native; GitHub has no native In-Progress, so use an `in-progress` label or a Project column + open→closed; a vault backlog uses a status field. Fix the mapping at founding. **Degrade (§5):** if the tracker/MCP is unreachable mid-loop, the Engineer still records pick rationale + ship SHA in `reports/loop-NN.md` and reconciles the ticket when it's back — never block the build on the tracker.
-- **The §6 product gate is the highest-value adaptation.** Identify the one thing the product lives or dies on and make a merge-gate check for it: porto → `/security-review` on auth/secret/path tickets; nvmber5 → **live reconciliation** on calc/statement-engine tickets (fixtures can hide render-time drift). If the project has no such invariant, **mark §6 reserved (do NOT renumber — §7 cross-refs must stay stable)** and drop the trust-gate lines — don't manufacture one.
-- **In-room-agent split is porto-specific.** porto split Engineer into a "conductor" + an in-room agent because porto *is* a collab-room product it dogfoods. For a normal app, the **Engineer builds directly** — that's the template default. Only reintroduce the split if the user is building an agent-collaboration tool they intend to dogfood.
-- **Drop porto's specifics:** the §36 "conversation could run in a porto room" north-star, "Depo" vocab, the dogfood-evidence framing of the digest, frozen UUIDs. Keep the *governance* (anti-photocopy, outcome-handoffs, epistemic-status, integration-optionality, vault-backbone) — those are universal.
+- **The §6 product gate is the highest-value adaptation.** Identify the one thing the product lives or dies on and make a merge-gate check for it: e.g. a security-sensitive app → a `/security-review` pass on auth/secret/path tickets; a financial-modeling app → **live reconciliation** on calc/statement-engine tickets (fixtures can hide render-time drift). If the project has no such invariant, **mark §6 reserved (do NOT renumber — §7 cross-refs must stay stable)** and drop the trust-gate lines — don't manufacture one.
+- **The Engineer builds directly (default).** For a normal app there's one builder: the Engineer session writes the code. Only split it into a coordinator + a separate worker agent if you're building an agent-collaboration tool you intend to dogfood (where the worker runs inside the product) — otherwise don't.
+- **Don't copy a source project's specifics:** its north-star, internal vocabulary, frozen IDs, or dogfood-evidence framing. Keep only the *governance* (anti-photocopy, outcome-handoffs, epistemic-status, integration-optionality, vault-backbone) — those are universal; re-derive everything product-specific from *this* project.
 
 ## Common mistakes
 
 | Mistake | Fix |
 |---|---|
-| **Guessing commit identity** | Read it from the repo's `git config` + `git log` + `remote`. porto baked an ambient email into convention → 30 misattributed commits + a 41-commit rewrite. Identity is verify-from-source, not assume. |
-| Photocopying porto's north-star / dogfood bits | Those are porto-specific. Port governance, re-derive the product spine from *this* project. |
+| **Guessing commit identity** | Read it from the repo's `git config` + `git log` + `remote`. An ambient email baked into convention once → 30 misattributed commits + a history rewrite. Identity is verify-from-source, not assume. |
+| Photocopying a source project's north-star / dogfood bits | Those don't transfer. Port governance, re-derive the product spine from *this* project. |
 | Giving a genesis a `handoff.md` | Genesis has no predecessor → no `handoff.md` yet. It writes one when IT retires (via `/handoff`). Founding briefs are `boot-block.md` only. |
 | Putting per-loop history in WORKSTATE | WORKSTATE = live-state only. History → `LOOP-LOG` + `reports/` + `git log`. |
 | Editing existing vault docs without a snapshot | Commit the pre-state first; it's the reversal point. |
@@ -115,4 +115,4 @@ The small READMEs are one paragraph each — generate them:
 
 ## Verify the skill works (before relying on it)
 
-This is a technique skill — test by **application**: dispatch a subagent with a described project (e.g. "a Rust CLI, existing vault, GitHub issues, no Linear") and the path to this SKILL.md, and ask it to produce the scaffolding *plan* + the filled identity/tracker/gate values. Check it (a) surveys before asking, (b) verifies identity from the repo, (c) adapts the tracker + product gate correctly, (d) doesn't photocopy porto specifics. Plug any gap, re-test.
+This is a technique skill — test by **application**: dispatch a subagent with a described project (e.g. "a Rust CLI, existing vault, GitHub issues, no Linear") and the path to this SKILL.md, and ask it to produce the scaffolding *plan* + the filled identity/tracker/gate values. Check it (a) surveys before asking, (b) verifies identity from the repo, (c) adapts the tracker + product gate correctly, (d) doesn't photocopy a source project's specifics. Plug any gap, re-test.

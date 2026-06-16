@@ -1,6 +1,6 @@
 # PM Inbox — CoS / Product ↔ PM async lane
 
-Ported from the porto team. The async surface where the CoS and Product hand the PM decisions to make.
+The async surface where the CoS and Product hand the PM decisions to make.
 
 **How it works:**
 - CoS **and Product** post calculus-movers and asks here (newest first); the CoS mirrors to the relevant ticket when one exists. Product *proposes* strategy → PM *decides and files* the ticket (Product doesn't file).

@@ -1,6 +1,6 @@
 # agents/ — agent lineages + the rotation process
 
-Per-role agent lineage records for {{PROJECT}}, per [[DECISIONS]] §2 (anti-photocopy) + §3 (outcome-shaped handoffs). Ported from the porto team. Manual process, driven by the `/handoff` skill.
+Per-role agent lineage records for {{PROJECT}}, per [[DECISIONS]] §2 (anti-photocopy) + §3 (outcome-shaped handoffs). Manual process, driven by the `/handoff` skill.
 
 ## The team
 

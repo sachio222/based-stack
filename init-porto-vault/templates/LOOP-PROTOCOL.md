@@ -1,12 +1,12 @@
 # LOOP-PROTOCOL.md — Standing Build-Loop Protocol ({{PROJECT}})
 
-**Founded {{DATE}} by CoS-Genesis**, ported from the porto-team validated-loop protocol and adapted for {{PROJECT}}. Owner: **CoS** (current generation). This is the governing contract for how the team ships. Re-read at every loop start (check *Last updated* at the bottom).
+**Founded {{DATE}} by CoS-Genesis.** Owner: **CoS** (current generation). This is the governing contract for how the team ships. Re-read at every loop start (check *Last updated* at the bottom).
 
 ## How this works
 
 Jake says **"go loop"** (one loop) or **"go loop ×N"** (a batch). That is the entire kickoff. The **Engineer** runs the loop. The **CoS** ratifies every loop independently and commits the vault. The **PM** curates the backlog ahead of the loop; relay to PM is **"check inbox"**. Per-loop briefs happen only when something changes — a delta brief supersedes this doc for that loop, then the CoS folds it back in here.
 
-> **Model:** the **Engineer agent IS the builder** — it picks the ticket, writes the code in `{{CODE_REPO}}`, commits, and owns the merge gate. The CoS is the independent second pair of eyes at ratification. (porto splits a "conductor" + an in-room agent because porto is itself a collab-room product it dogfoods; a normal project doesn't — the Engineer builds directly.)
+> **Model:** the **Engineer agent IS the builder** — it picks the ticket, writes the code in `{{CODE_REPO}}`, commits, and owns the merge gate. The CoS is the independent second pair of eyes at ratification. (A normal project has one builder; only split into a coordinator + a separate worker agent if you're building an agent-collaboration tool you intend to dogfood — where the worker runs inside the product.)
 
 **Batch semantics (×N):** up to N sequential loops on one kickoff — one ticket per loop, never a retry of a failed one (one-kickoff-one-attempt per ticket). STOP the batch early on: a failed build / red gate · a human-gated decision · an empty or materially-changed pickable surface. Every loop still gets its own `reports/loop-NN.md` and `LOOP-LOG.md` entry — batching coarsens the relay, never the measurement.
 
@@ -61,4 +61,4 @@ Independent verification: default-branch SHA, ticket lifecycle + no clobber, gat
 - **Execution focus:** {{SPINE}}.
 - **Identity (settled):** {{IDENTITY}}, plain `git commit`, one commit per ticket. Verified from the repo. (Ambient context may report a different email — ignore it; see [[LESSONS]].)
 
-**Last updated:** {{DATE}} (CoS-Genesis: founded, ported from porto's LOOP-PROTOCOL; Engineer-builds-directly model{{PRODUCT_GATE_NOTE}}).
+**Last updated:** {{DATE}} (CoS-Genesis: founded; Engineer-builds-directly model{{PRODUCT_GATE_NOTE}}).
