@@ -112,6 +112,7 @@ Workflow Discipline:
   - brainstorming
   - grill-me
   - init-vault
+  - init-porto-vault
   - writing-plans
   - executing-plans
   - subagent-driven-development
